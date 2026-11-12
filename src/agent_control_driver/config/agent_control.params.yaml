@@ -1,0 +1,41 @@
+agent_control_driver:
+  ros__parameters:
+    robot_ip: "192.168.234.1"
+    send_port: 8081
+    recv_port: 8080
+    role: "sdk"
+    control_rate_hz: 30.0
+    status_rate_hz: 5.0
+    auto_request_control: true
+    control_request_period_sec: 1.0
+    max_speed_scale: 0.35
+    bridge_port: 8766
+    motion_timeout_ms: 35000
+    lease_ms: 1500
+    api_link_timeout_ms: 1000
+    position_tolerance_m: 0.03
+    angle_tolerance_deg: 2.0
+    acceptance_m: 0.05
+    acceptance_deg: 5.0
+    no_progress_timeout_ms: 2000
+    settle_ms: 600
+    force_slow_speed: true
+    sdk_forward_sign: 1.0
+    sdk_strafe_sign: 1.0
+    sdk_yaw_sign: 1.0
+    yaw_feedback_sign: 1.0
+    estop_recovery_cmd: 122
+    warn_period_sec: 5.0
+    max_forward_m: 5.0
+    max_strafe_m: 3.0
+    max_turn_deg: 180.0
+
+agent_control_api:
+  ros__parameters:
+    port: 8100
+    bind_address: "127.0.0.1"
+    bridge_host: "127.0.0.1"
+    bridge_port: 8766
+    status_timeout_sec: 2.0
+    job_timeout_sec: 45.0
+    poll_lease_timeout_sec: 1.5
